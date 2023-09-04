@@ -14,10 +14,25 @@ import {
   ShoppingCartOutlined,
   Menu,
 } from "@mui/icons-material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faWhatsapp,
+  faFacebook,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
 export const Navbar = () => {
+  // Número de WhatsApp del cliente
+  const whatsappNumber = "573103351279";
+
+  // Función para abrir WhatsApp en un nuevo tab
+  const openWhatsApp = () => {
+    window.open(`https://api.whatsapp.com/send?phone=${whatsappNumber}`);
+  };
+
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#333" }}>
+    <AppBar position="static" sx={{ backgroundColor: "#007bff" }}>
       <Toolbar>
         <NextLink href="/" passHref>
           <Link
@@ -120,9 +135,45 @@ export const Navbar = () => {
           </Link>
         </NextLink>
 
-        <Button
+        <IconButton
           sx={{
             color: "#fff",
+            marginLeft: "1rem",
+          }}
+          onClick={openWhatsApp}
+        >
+          <FontAwesomeIcon icon={faWhatsapp} />
+        </IconButton>
+
+        {/* Enlaces de redes sociales */}
+        <IconButton
+          sx={{
+            color: "#fff",
+            marginLeft: "1rem",
+          }}
+        >
+          <FontAwesomeIcon icon={faFacebook} />
+        </IconButton>
+        <IconButton
+          sx={{
+            color: "#fff",
+            marginLeft: "1rem",
+          }}
+        >
+          <FontAwesomeIcon icon={faTwitter} />
+        </IconButton>
+        <IconButton
+          sx={{
+            color: "#fff",
+            marginLeft: "1rem",
+          }}
+        >
+          <FontAwesomeIcon icon={faInstagram} />
+        </IconButton>
+
+        <Button
+          sx={{
+            color: "#1ab6ef",
             border: "2px solid #fff",
             borderRadius: "2px",
             textTransform: "uppercase",
