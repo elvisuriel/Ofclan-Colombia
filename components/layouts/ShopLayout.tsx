@@ -1,115 +1,51 @@
-<<<<<<< HEAD
-import { FC } from 'react';
-import Head from 'next/head';
+import { FC } from "react";
+import Head from "next/head";
 
-import { Navbar, SideMenu } from '../ui';
-
+import { Navbar, SideMenu } from "../ui";
 
 interface Props {
-    title: string;
-    pageDescription: string;
-    imageFullUrl?: string;
+  title: string;
+  pageDescription: string;
+  imageFullUrl?: string;
 }
 
-export const ShopLayout:FC<Props> = ({ children, title, pageDescription, imageFullUrl }) => {
+export const ShopLayout: FC<Props> = ({
+  children,
+  title,
+  pageDescription,
+  imageFullUrl,
+}) => {
   return (
     <>
-        <Head>
-            <title>{ title }</title>
+      <Head>
+        <title>{title}</title>
 
-            <meta name="description" content={ pageDescription } />
-            
-            
-            <meta name="og:title" content={ title } />
-            <meta name="og:description" content={ pageDescription } />
+        <meta name="description" content={pageDescription} />
 
-            {
-                imageFullUrl && (
-                    <meta name="og:image" content={ imageFullUrl } />
-                )
-            }
+        <meta name="og:title" content={title} />
+        <meta name="og:description" content={pageDescription} />
 
-        </Head> 
+        {imageFullUrl && <meta name="og:image" content={imageFullUrl} />}
+      </Head>
 
-        <nav>
-            <Navbar />
-        </nav>
+      <nav>
+        <Navbar />
+      </nav>
 
-        <SideMenu />
+      <SideMenu />
 
-        <main style={{
-            margin: '80px auto',
-            maxWidth: '1440px',
-            padding: '0px 30px'
-        }}>
-            { children }
-        </main>
+      <main
+        style={{
+          margin: "80px auto",
+          maxWidth: "1440px",
+          padding: "0px 30px",
+        }}
+      >
+        {children}
+      </main>
 
-        {/* Footer */}
-        <footer>
-            {/* TODO: mi custom footer */}
-        </footer>
-
+      {/* Footer */}
+      <footer>{/* TODO: mi custom footer */}</footer>
     </>
-  )
-}
-
-
-=======
-import { FC } from 'react';
-import Head from 'next/head';
-
-import { Navbar, SideMenu } from '../ui';
-
-
-interface Props {
-    title: string;
-    pageDescription: string;
-    imageFullUrl?: string;
-}
-
-export const ShopLayout:FC<Props> = ({ children, title, pageDescription, imageFullUrl }) => {
-  return (
-    <>
-        <Head>
-            <title>{ title }</title>
-
-            <meta name="description" content={ pageDescription } />
-            
-            
-            <meta name="og:title" content={ title } />
-            <meta name="og:description" content={ pageDescription } />
-
-            {
-                imageFullUrl && (
-                    <meta name="og:image" content={ imageFullUrl } />
-                )
-            }
-
-        </Head> 
-
-        <nav>
-            <Navbar />
-        </nav>
-
-        <SideMenu />
-
-        <main style={{
-            margin: '80px auto',
-            maxWidth: '1440px',
-            padding: '0px 30px'
-        }}>
-            { children }
-        </main>
-
-        {/* Footer */}
-        <footer>
-            {/* TODO: mi custom footer */}
-        </footer>
-
-    </>
-  )
-}
-
-
->>>>>>> 1f6200a577589790a4dfb53472758544a7b282d1
+  );
+};
