@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import NextLink from "next/link";
 import {
   Grid,
+  Container,
   Card,
   CardActionArea,
   CardMedia,
@@ -9,19 +10,34 @@ import {
   Typography,
   Link,
 } from "@mui/material";
-
 import { IProduct } from "../../interfaces";
 
 interface Props {
+  products: IProduct[];
+}
+
+export const ProductList: React.FC<Props> = ({ products }) => {
+  return (
+    <Container>
+      <Grid container spacing={3}>
+        {products.map((product, index) => (
+          <ProductCard key={index} product={product} />
+        ))}
+      </Grid>
+    </Container>
+  );
+};
+
+interface ProductCardProps {
   product: IProduct;
 }
 
-export const ProductCard: React.FC<Props> = ({ product }) => {
-  const [isHovered, setIsHovered] = useState(false);
+export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const defaultImage = `products/${product.images[0]}`;
+  const hoverImage = `products/${product.images[1]}`;
 
-  const productImage = isHovered
-    ? `products/${product.images[1]}`
-    : `products/${product.images[0]}`;
+  const [isHovered, setIsHovered] = React.useState(false);
+  const productImage = isHovered ? hoverImage : defaultImage;
 
   return (
     <Grid
@@ -29,13 +45,12 @@ export const ProductCard: React.FC<Props> = ({ product }) => {
       xs={12}
       sm={6}
       md={4}
-      lg={4}
+      lg={3}
       sx={{ px: 2, pb: 2 }} // Añade margen en cada lado de la tarjeta
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <Card sx={{ maxWidth: 200, mx: "auto" }}>
-        {" "}
         {/* Ajusta el ancho máximo y centra la tarjeta */}
         <NextLink href={`/product/${product.slug}`} passHref prefetch={false}>
           <Link>
