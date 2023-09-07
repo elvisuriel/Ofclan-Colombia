@@ -2,6 +2,7 @@ import { FC } from "react";
 import Head from "next/head";
 
 import { Navbar, SideMenu } from "../ui";
+import Footer from "../footer";
 
 interface Props {
   title: string;
@@ -45,7 +46,9 @@ export const ShopLayout: FC<Props> = ({
       </main>
 
       {/* Footer */}
-      <footer>{/* TODO: mi custom footer */}</footer>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };

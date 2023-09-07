@@ -33,7 +33,14 @@ export const Navbar = () => {
 
   return (
     <AppBar position="static" sx={{ backgroundColor: "#007bff" }}>
-      <Toolbar>
+      <Toolbar
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexWrap: "wrap",
+        }}
+      >
         <NextLink href="/" passHref>
           <Link
             display="flex"
@@ -44,153 +51,112 @@ export const Navbar = () => {
               "&:hover": {
                 textDecoration: "underline",
               },
+              marginRight: "2rem", // Añade margen a la derecha
             }}
           >
-            <Typography variant="h4" sx={{ marginRight: "1rem" }}>
-              OF-CLAN
+            <Typography variant="h4">OF-CLAN</Typography>
+            <Typography variant="h6" sx={{ marginLeft: "1rem" }}>
+              Shop
             </Typography>
-            <Typography variant="h6">Shop</Typography>
           </Link>
         </NextLink>
-
-        <Box flex={1} />
 
         <Box
           sx={{
-            display: { xs: "none", sm: "block" },
+            display: "flex",
+            alignItems: "center",
+            flexWrap: "wrap",
+            marginLeft: "auto",
             "& > *": {
               marginRight: "1rem",
+              marginBottom: "0.5rem", // Espaciado inferior para elementos en pantallas pequeñas
+              fontSize: "24px", // Ajusta el tamaño de los íconos en pantallas pequeñas
             },
           }}
         >
-          <NextLink href="/category/men" passHref>
-            <Link
-              sx={{
-                textDecoration: "none",
-                color: "#fff",
-                "&:hover": {
-                  textDecoration: "underline",
-                },
-              }}
-            >
-              <Button variant="outlined">Hombres</Button>
-            </Link>
-          </NextLink>
-          <NextLink href="/category/women" passHref>
-            <Link
-              sx={{
-                textDecoration: "none",
-                color: "#fff",
-                "&:hover": {
-                  textDecoration: "underline",
-                },
-              }}
-            >
-              <Button variant="outlined">Mujeres</Button>
-            </Link>
-          </NextLink>
-          <NextLink href="/category/kid" passHref>
-            <Link
-              sx={{
-                textDecoration: "none",
-                color: "#fff",
-                "&:hover": {
-                  textDecoration: "underline",
-                },
-              }}
-            >
-              <Button variant="outlined">Niños</Button>
-            </Link>
-          </NextLink>
-        </Box>
-
-        <Box flex={1} />
-
-        <IconButton
-          sx={{
-            color: "#fff",
-          }}
-        >
-          <SearchOutlined />
-        </IconButton>
-
-        <NextLink href="/cart" passHref>
-          <Link
+          <IconButton
             sx={{
               color: "#fff",
+            }}
+          >
+            <SearchOutlined />
+          </IconButton>
+          <NextLink href="/cart" passHref>
+            <Link
+              sx={{
+                color: "#fff",
+                "&:hover": {
+                  color: "#ff9800",
+                },
+              }}
+            >
+              <IconButton
+                sx={{
+                  color: "#fff",
+                }}
+              >
+                <Badge badgeContent={2} color="secondary">
+                  <ShoppingCartOutlined />
+                </Badge>
+              </IconButton>
+            </Link>
+          </NextLink>
+          <IconButton
+            sx={{
+              color: "#fff",
+              fontSize: "28px", // Ajusta el tamaño del ícono de WhatsApp en pantallas pequeñas
+            }}
+            onClick={openWhatsApp}
+          >
+            <FontAwesomeIcon icon={faWhatsapp} />
+          </IconButton>
+          {/* Enlaces de redes sociales */}
+          <IconButton
+            sx={{
+              color: "#fff",
+              fontSize: "28px", // Ajusta el tamaño de los íconos de redes sociales en pantallas pequeñas
+            }}
+            component="a"
+            href="https://www.facebook.com/people/Of-clan/100076188729394/?mibextid=nW3QTL"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faFacebook} />
+          </IconButton>
+          <IconButton
+            sx={{
+              color: "#fff",
+              marginLeft: "1rem",
+              fontSize: "28px", // Ajusta el tamaño de los íconos de redes sociales en pantallas pequeñas
+            }}
+            component="a"
+            href="https://www.instagram.com/ofclancolombia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faInstagram} />
+          </IconButton>
+          <Button
+            sx={{
+              color: "#1ab6ef",
+              border: "2px solid #fff",
+              borderRadius: "2px",
+              textTransform: "uppercase",
+              marginLeft: "1rem",
               "&:hover": {
-                color: "#ff9800",
+                backgroundColor: "#fff",
+                color: "#333",
               },
             }}
           >
-            <IconButton
+            Menú
+            <Menu
               sx={{
-                color: "#fff",
+                marginLeft: "0.25rem",
               }}
-            >
-              <Badge badgeContent={2} color="secondary">
-                <ShoppingCartOutlined />
-              </Badge>
-            </IconButton>
-          </Link>
-        </NextLink>
-
-        <IconButton
-          sx={{
-            color: "#fff",
-            marginLeft: "1rem",
-          }}
-          onClick={openWhatsApp}
-        >
-          <FontAwesomeIcon icon={faWhatsapp} />
-        </IconButton>
-
-        {/* Enlaces de redes sociales */}
-        <IconButton
-          sx={{
-            color: "#fff",
-            marginLeft: "1rem",
-          }}
-        >
-          <FontAwesomeIcon icon={faFacebook} />
-        </IconButton>
-        <IconButton
-          sx={{
-            color: "#fff",
-            marginLeft: "1rem",
-          }}
-        >
-          <FontAwesomeIcon icon={faTwitter} />
-        </IconButton>
-        <IconButton
-          sx={{
-            color: "#fff",
-            marginLeft: "1rem",
-          }}
-        >
-          <FontAwesomeIcon icon={faInstagram} />
-        </IconButton>
-
-        <Button
-          sx={{
-            color: "#1ab6ef",
-            border: "2px solid #fff",
-            borderRadius: "2px",
-            textTransform: "uppercase",
-            marginLeft: "1rem",
-            "&:hover": {
-              backgroundColor: "#fff",
-              color: "#333",
-            },
-          }}
-        >
-          Menú
-          <Menu
-            sx={{
-              marginLeft: "0.25rem",
-            }}
-          />
-        </Button>
+            />
+          </Button>
+        </Box>
       </Toolbar>
     </AppBar>
   );
