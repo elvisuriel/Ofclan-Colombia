@@ -32,7 +32,11 @@ export const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#007bff" }}>
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: "#007bff" }}
+      className="navbar"
+    >
       <Toolbar
         sx={{
           display: "flex",
@@ -55,7 +59,7 @@ export const Navbar = () => {
             }}
           >
             <Typography variant="h4">OF-CLAN</Typography>
-            <Typography variant="h6" sx={{ marginLeft: "1rem" }}>
+            <Typography variant="h6" sx={{ marginLeft: "2rem" }}>
               Shop
             </Typography>
           </Link>
@@ -69,8 +73,8 @@ export const Navbar = () => {
             marginLeft: "auto",
             "& > *": {
               marginRight: "1rem",
-              marginBottom: "0.5rem", // Espaciado inferior para elementos en pantallas pequeñas
-              fontSize: "24px", // Ajusta el tamaño de los íconos en pantallas pequeñas
+              marginBottom: "0,5rem", // Espaciado inferior para elementos en pantallas pequeñas
+              fontSize: "25px", // Ajusta el tamaño de los íconos en pantallas pequeñas
             },
           }}
         >
