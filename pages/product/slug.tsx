@@ -9,7 +9,7 @@ const product = initialData.products[0];
 const ProductPage = () => {
   return (
     <ShopLayout title={product.title} pageDescription={product.description}>
-      <Grid container spacing={3}>
+      <Grid container spacing={12}>
         <Grid item xs={12} sm={7}>
           <ProductSlideshow images={product.images} />
         </Grid>

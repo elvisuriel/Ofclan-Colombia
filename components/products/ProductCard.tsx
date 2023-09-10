@@ -52,7 +52,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     >
       <Card sx={{ maxWidth: 200, mx: "auto" }}>
         {/* Ajusta el ancho máximo y centra la tarjeta */}
-        <NextLink href={`/product/${product.slug}`} passHref prefetch={false}>
+        <NextLink href="/product/slug" passHref prefetch={false}>
           <Link>
             <CardActionArea>
               <CardMedia
