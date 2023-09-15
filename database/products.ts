@@ -22,7 +22,7 @@ export const initialData: SeedData = {
   products: [
     {
       description:
-        "Introducing the Tesla Chill Collection. The Men’s Chill Crew Neck Sweatshirt has a premium, heavyweight exterior and soft fleece interior for comfort in any season. The sweatshirt features a subtle thermoplastic polyurethane T logo on the chest and a Tesla wordmark below the back collar. Made from 60% cotton and 40% recycled polyester.",
+        "Pantaloneta Deportiva de Alto Rendimiento: Nuestra pantaloneta deportiva de Of Clan Colombia está diseñada para brindarte el máximo rendimiento en tus actividades deportivas. Fabricada con los más altos estándares de calidad colombiana, esta pantaloneta te ofrece comodidad y durabilidad incomparables.",
       images: ["PhotoRoom-1.png", "PhotoRoom-2.png"],
       inStock: 7,
       price: 50000,
