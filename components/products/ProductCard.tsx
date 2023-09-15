@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NextLink from "next/link";
 import {
   Grid,
@@ -11,33 +11,25 @@ import {
   Link,
 } from "@mui/material";
 import { IProduct } from "../../interfaces";
+import { useRouter } from "next/router";
 
 interface Props {
-  products: IProduct[];
-}
-
-export const ProductList: React.FC<Props> = ({ products }) => {
-  return (
-    <Container>
-      <Grid container spacing={3}>
-        {products.map((product, index) => (
-          <ProductCard key={index} product={product} />
-        ))}
-      </Grid>
-    </Container>
-  );
-};
-
-interface ProductCardProps {
   product: IProduct;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+export const ProductCard: React.FC<Props> = ({ product }) => {
+  const router = useRouter();
+
+  const [isHovered, setIsHovered] = useState(false);
+
   const defaultImage = `products/${product.images[0]}`;
   const hoverImage = `products/${product.images[1]}`;
 
-  const [isHovered, setIsHovered] = React.useState(false);
   const productImage = isHovered ? hoverImage : defaultImage;
+
+  const handleImageClick = () => {
+    router.push(`/product/${product.slug}`);
+  };
 
   return (
     <Grid
@@ -46,24 +38,21 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       sm={6}
       md={4}
       lg={3}
-      sx={{ px: 2, pb: 2 }} // Añade margen en cada lado de la tarjeta
+      sx={{ px: 2, pb: 2 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <Card sx={{ maxWidth: 200, mx: "auto" }}>
-        {/* Ajusta el ancho máximo y centra la tarjeta */}
-        <NextLink href="/product/slug" passHref prefetch={false}>
-          <Link>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                className="fadeIn"
-                image={productImage}
-                alt={product.title}
-              />
-            </CardActionArea>
-          </Link>
-        </NextLink>
+        <Link onClick={handleImageClick}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              className="fadeIn"
+              image={productImage}
+              alt={product.title}
+            />
+          </CardActionArea>
+        </Link>
         <Box p={2} textAlign="center" className="fadeIn">
           <Typography variant="subtitle1" fontWeight={700} mb={1}>
             {product.title}

@@ -3,10 +3,20 @@ import { ShopLayout } from "../../components/layouts";
 import { ProductSlideshow, SizeSelector } from "../../components/products";
 import { initialData } from "../../database/products";
 import { ItemCounter } from "../../components/ui/ItemCounter";
-
-const product = initialData.products[0];
+import { useRouter } from "next/router";
 
 const ProductPage = () => {
+  const router = useRouter();
+  const { slug } = router.query; // Obtener el slug del producto de la consulta
+
+  // Buscar el producto correspondiente en los datos iniciales
+  const product = initialData.products.find((p) => p.slug === slug);
+
+  if (!product) {
+    // Manejar el caso en el que no se encuentre el producto
+    return <div>Producto no encontrado</div>;
+  }
+
   return (
     <ShopLayout title={product.title} pageDescription={product.description}>
       <Grid container spacing={12}>
@@ -29,18 +39,13 @@ const ProductPage = () => {
             <Box sx={{ my: 2 }}>
               <Typography variant="subtitle2">Cantidad</Typography>
               <ItemCounter />
-              <SizeSelector
-                // selectedSize={ product.sizes[2] }
-                sizes={product.sizes}
-              />
+              <SizeSelector sizes={product.sizes} />
             </Box>
 
             {/* Agregar al carrito */}
             <Button color="secondary" className="circular-btn">
               Agregar al carrito
             </Button>
-
-            {/* <Chip label="No hay disponibles" color="error" variant='outlined' /> */}
 
             {/* Descripción */}
             <Box sx={{ mt: 3 }}>
