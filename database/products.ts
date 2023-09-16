@@ -22,7 +22,7 @@ export const initialData: SeedData = {
   products: [
     {
       description:
-        "Pantaloneta Deportiva de Alto Rendimiento: Nuestra pantaloneta deportiva de Of Clan Colombia está diseñada para brindarte el máximo rendimiento en tus actividades deportivas. Fabricada con los más altos estándares de calidad colombiana, esta pantaloneta te ofrece comodidad y durabilidad incomparables.",
+        "Pantaloneta Deportiva de Alto Rendimiento: Nuestra pantaloneta deportiva de Of Clan está diseñada para brindarte el máximo rendimiento en tus actividades deportivas. Fabricada con los más altos estándares de calidad colombiana, esta pantaloneta te ofrece comodidad y durabilidad incomparables.",
       images: ["PhotoRoom-1.png", "PhotoRoom-2.png"],
       inStock: 7,
       price: 50000,
@@ -35,7 +35,7 @@ export const initialData: SeedData = {
     },
     {
       description:
-        "The Men's Quilted Shirt Jacket features a uniquely fit, quilted design for warmth and mobility in cold weather seasons. With an overall street-smart aesthetic, the jacket features subtle silicone injected Tesla logos below the back collar and on the right sleeve, as well as custom matte metal zipper pulls. Made from 87% nylon and 13% polyurethane.",
+        "Pantaloneta Deportiva de Alta Durabilidad de Of Clan: La pantaloneta deportiva de Of Clan es sinónimo de durabilidad y resistencia. Construida para soportar los entrenamientos más intensos, esta prenda colombiana de calidad está diseñada para acompañarte en tus actividades deportivas durante mucho tiempo.",
       images: ["PhotoRoom-3.png", "PhotoRoom-4.png"],
       inStock: 5,
       price: 50000,
@@ -49,7 +49,7 @@ export const initialData: SeedData = {
 
     {
       description:
-        "Introducing the Tesla Raven Collection. The Men's Raven Lightweight Zip Up Bomber has a premium, modern silhouette made from a sustainable bamboo cotton blend for versatility in any season. The hoodie features subtle thermoplastic polyurethane Tesla logos on the left chest and below the back collar, a concealed chest pocket with custom matte zipper pulls and a french terry interior. Made from 70% bamboo and 30% cotton.",
+        "Experimenta la frescura y la comodidad en cada movimiento con nuestras pantalonetas deportivas. El tejido transpirable de alta calidad garantiza una excelente ventilación, manteniéndote seco y cómodo. Descubre la calidad de los productos colombianos de Of Clan Colombia.",
       images: ["PhotoRoom-5.png", "PhotoRoom-6.png"],
       inStock: 10,
       price: 50000,
@@ -63,7 +63,7 @@ export const initialData: SeedData = {
 
     {
       description:
-        "Introducing the Tesla Turbine Collection. Designed for style, comfort and everyday lifestyle, the Men's Turbine Long Sleeve Tee features a subtle, water-based T logo on the left chest and our Tesla wordmark below the back collar. The lightweight material is double-dyed, creating a soft, casual style for ideal wear in any season. Made from 50% cotton and 50% polyester.",
+        "Pantaloneta Deportiva de Diseño Ergonómico de Of Clan: Nuestras pantalonetas deportivas han sido diseñadas pensando en tu comodidad y rendimiento. El ajuste ergonómico se adapta a tu cuerpo, permitiéndote moverte con facilidad en cualquier actividad deportiva. Of Clan se enorgullece de ofrecer productos colombianos de calidad excepcional.",
       images: ["PhotoRoom-7.png", "PhotoRoom-8.png"],
       inStock: 50,
       price: 50000,
@@ -76,7 +76,7 @@ export const initialData: SeedData = {
     },
     {
       description:
-        "Introducing the Tesla Turbine Collection. Designed for style, comfort and everyday lifestyle, the Men's Turbine Short Sleeve Tee features a subtle, water-based Tesla wordmark across the chest and our T logo below the back collar. The lightweight material is double-dyed, creating a soft, casual style for ideal wear in any season. Made from 50% cotton and 50% polyester.",
+        "Pantaloneta Deportiva de Tejido Suave de Of Clan: Si buscas suavidad y comodidad en tus pantalonetas deportivas, nuestras prendas son la elección perfecta. Fabricadas con tejidos suaves de alta calidad, estas pantalonetas te brindarán una sensación de lujo durante tus entrenamientos. Of Clan, una marca 100% colombiana, se compromete a ofrecerte lo mejor en calidad y comodidad.",
       images: ["PhotoRoom-9.png", "PhotoRoom-10.png"],
       inStock: 50,
       price: 50000,
@@ -89,7 +89,7 @@ export const initialData: SeedData = {
     },
     {
       description:
-        "Designed for comfort, the Cybertruck Owl Tee is made from 100% cotton and features our signature Cybertruck icon on the back.",
+        "Pantaloneta Deportiva de Secado Rápido de Of Clan: Of Clan presenta una pantaloneta deportiva de secado rápido que se adapta perfectamente a tu estilo de vida activo. Con esta prenda, disfrutarás de la máxima comodidad y rendimiento. Además, al elegir productos colombianos, estás apoyando la industria nacional y disfrutando de calidad excepcional.",
       images: ["PhotoRoom-11.png", "PhotoRoom-12.png"],
       inStock: 0,
       price: 50000,
@@ -102,7 +102,7 @@ export const initialData: SeedData = {
     },
     {
       description:
-        "Inspired by our fully integrated home solar and storage system, the Tesla Solar Roof Tee advocates for clean, sustainable energy wherever you go. Designed for fit, comfort and style, the tee features an aerial view of our seamless Solar Roof design on the front with our signature T logo above 'Solar Roof' on the back. Made from 100% Peruvian cotton.",
+        "Pantaloneta Deportiva de Alto Rendimiento de Of Clan: Experimenta el máximo rendimiento en tus entrenamientos con nuestra pantaloneta deportiva de alto rendimiento. Diseñada con atención a cada detalle, esta prenda colombiana te brindará la libertad de movimiento que necesitas para alcanzar tus metas deportivas. Of Clan, orgullosamente colombiana, te ofrece calidad y estilo.",
       images: ["PhotoRoom-13.png", "PhotoRoom-14.png"],
       inStock: 15,
       price: 50000,
@@ -115,7 +115,7 @@ export const initialData: SeedData = {
     },
     {
       description:
-        "Inspired by the world’s most unlimited resource, the Let the Sun Shine Tee highlights our fully integrated home solar and storage system. Designed for fit, comfort and style, the tee features a sunset graphic along with our Tesla wordmark on the front and our signature T logo printed above 'Solar Roof' on the back. Made from 100% Peruvian cotton.",
+        "Pantaloneta Deportiva de Diseño Moderno de Of Clan: Nuestra pantaloneta deportiva combina funcionalidad y estilo en un diseño moderno y atractivo. Luce bien mientras te ejercitas con esta prenda de calidad superior, fabricada en Colombia. Descubre por qué los productos de Of Clan son la elección preferida de los amantes del deporte.",
       images: ["PhotoRoom-15.png", "PhotoRoom-16.png"],
       inStock: 17,
       price: 50000,
@@ -128,7 +128,7 @@ export const initialData: SeedData = {
     },
     {
       description:
-        "Inspired by the world’s most unlimited resource, the Let the Sun Shine Tee highlights our fully integrated home solar and storage system. Designed for fit, comfort and style, the tee features a sunset graphic along with our Tesla wordmark on the front and our signature T logo printed above 'Solar Roof' on the back. Made from 100% Peruvian cotton.",
+        "Pantaloneta Deportiva de Secado Rápido para Entrenamientos Intensos: Para los deportistas que se esfuerzan al máximo, ofrecemos una pantaloneta deportiva de secado rápido. Esta prenda colombiana te mantendrá fresco y seco incluso en los entrenamientos más intensos. Of Clan se enorgullece de ofrecer productos que combinan la excelencia colombiana y la calidad superior.",
       images: ["PhotoRoom-17.png", "PhotoRoom-18.png"],
       inStock: 17,
       price: 50000,
@@ -141,7 +141,7 @@ export const initialData: SeedData = {
     },
     {
       description:
-        "Inspired by our fully integrated home solar and storage system, the Tesla Solar Roof Tee advocates for clean, sustainable energy wherever you go. Designed for fit, comfort and style, the tee features an aerial view of our seamless Solar Roof design on the front with our signature T logo above 'Solar Roof' on the back. Made from 100% Peruvian cotton.",
+        "Pantaloneta Deportiva de Calidad Premium de Of Clan: Si buscas la mejor calidad en pantalonetas deportivas, no busques más. Nuestra pantaloneta deportiva premium está confeccionada con los mejores materiales colombianos y se adapta a tus necesidades deportivas. Disfruta de la comodidad y la durabilidad de los productos de Of Clan.",
       images: ["PhotoRoom-13.png", "PhotoRoom-14.png"],
       inStock: 15,
       price: 50000,
@@ -154,7 +154,7 @@ export const initialData: SeedData = {
     },
     {
       description:
-        "Inspired by the world’s most unlimited resource, the Let the Sun Shine Tee highlights our fully integrated home solar and storage system. Designed for fit, comfort and style, the tee features a sunset graphic along with our Tesla wordmark on the front and our signature T logo printed above 'Solar Roof' on the back. Made from 100% Peruvian cotton.",
+        "Pantaloneta Deportiva Todo Terreno de Of Clan: Ya sea en el gimnasio o al aire libre, nuestra pantaloneta deportiva todo terreno te acompañará en todas tus actividades deportivas. Su diseño versátil y su calidad colombiana te garantizan un rendimiento excepcional en cualquier entorno. Elige productos de Of Clan y experimenta la diferencia.",
       images: ["PhotoRoom-15.png", "PhotoRoom-16.png"],
       inStock: 17,
       price: 50000,
@@ -167,7 +167,7 @@ export const initialData: SeedData = {
     },
     {
       description:
-        "Inspired by the world’s most unlimited resource, the Let the Sun Shine Tee highlights our fully integrated home solar and storage system. Designed for fit, comfort and style, the tee features a sunset graphic along with our Tesla wordmark on the front and our signature T logo printed above 'Solar Roof' on the back. Made from 100% Peruvian cotton.",
+        "Pantaloneta Deportiva de Fabricación Local de Of Clan: Apoya la industria colombiana al elegir nuestra pantaloneta deportiva de fabricación local. Cada prenda es un testimonio de la artesanía y la calidad que caracterizan a los productos colombianos. Disfruta de la comodidad y el estilo que solo Of Clan puede ofrecer en cada pantaloneta.",
       images: ["PhotoRoom-17.png", "PhotoRoom-18.png"],
       inStock: 17,
       price: 50000,
