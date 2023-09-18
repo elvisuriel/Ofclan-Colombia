@@ -6,7 +6,7 @@ import { initialData } from "../../database/products";
 import { ItemCounter } from "../../components/ui/ItemCounter";
 import { useRouter } from "next/router";
 
-const ProductPage: FC = () => {
+export const ProductPage: FC = () => {
   const router = useRouter();
   const { slug } = router.query; // Obtener el slug del producto de la consulta
 
@@ -19,34 +19,35 @@ const ProductPage: FC = () => {
   }
 
   // Estado para rastrear la cantidad y talla seleccionadas
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [cantidad, setCantidad] = useState(1);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [selectedSize, setSelectedSize] = useState<string | undefined>(
     undefined
   );
 
-  // Función para abrir WhatsApp en un nuevo tab
-  const whatsappNumber = "573103351279";
-  const openWhatsApp = () => {
-    // Construye el mensaje de WhatsApp con la información seleccionada
-    const message = `¡Hola! Estoy interesado en comprar ${cantidad} ${
-      product.title
-    } en talla ${selectedSize || "sin seleccionar"}.`;
-
-    // Codifica el mensaje para que sea parte de la URL
-    const encodedMessage = encodeURIComponent(message);
-
-    // Construye la URL completa con el mensaje codificado
-    const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
-
-    // Abre la URL en una nueva ventana o pestaña
-    window.open(whatsappURL, "_blank");
-  };
-
-  // Función para agregar al carrito
+  // Función para agregar al carrito (simplemente guarda el producto en una lista por ahora)
   const addToCart = () => {
-    // Aquí puedes agregar la lógica para agregar el producto al carrito
-    // Puedes usar una librería de manejo de carritos o implementar tu propia lógica de carrito
-    // Por ejemplo, puedes almacenar los productos en el estado local o en una base de datos.
+    // Validar que se haya seleccionado una talla
+    if (!selectedSize) {
+      alert("Por favor, seleccione una talla antes de agregar al carrito.");
+      return;
+    }
+
+    // Agregar el producto al carrito (esto es solo un ejemplo, puedes implementar tu propia lógica)
+    const itemToAdd = {
+      product,
+      cantidad,
+      selectedSize,
+    };
+
+    // Aquí puedes manejar la lógica para agregar el producto al carrito.
+    // Puedes usar el estado local, una base de datos o una librería de manejo de carritos.
+    // Por ahora, simplemente muestra un mensaje de confirmación.
+    alert("Producto agregado al carrito");
+
+    // Redirigir al usuario a la página del carrito
+    router.push("/cart"); // Asegúrate de que la ruta coincida con la de tu carrito.
   };
 
   return (
@@ -73,7 +74,8 @@ const ProductPage: FC = () => {
               <ItemCounter cantidad={cantidad} setCantidad={setCantidad} />
               <SizeSelector
                 sizes={product.sizes}
-                selectedSize={selectedSize}
+                onSelectSize={selectedSize}
+                // eslint-disable-next-line react/jsx-no-duplicate-props
                 onSelectSize={setSelectedSize}
               />
             </Box>
@@ -82,7 +84,7 @@ const ProductPage: FC = () => {
             <Button
               color="primary"
               className="circular-btn"
-              onClick={openWhatsApp}
+              onClick={addToCart}
             >
               Agregar al carrito
             </Button>
@@ -98,5 +100,3 @@ const ProductPage: FC = () => {
     </ShopLayout>
   );
 };
-
-export default ProductPage;

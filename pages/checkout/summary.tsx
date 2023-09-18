@@ -1,5 +1,5 @@
+import { useState } from "react";
 import NextLink from "next/link";
-
 import {
   Link,
   Box,
@@ -10,11 +10,29 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-
 import { ShopLayout } from "../../components/layouts/ShopLayout";
 import { CartList, OrderSummary } from "../../components/cart";
 
 const SummaryPage = () => {
+  // Estado para el carrito de compras
+  const [cart, setCart] = useState([
+    // Aquí puedes agregar los productos al carrito
+    {
+      product: {
+        title: "Producto 1",
+        price: 10.0,
+      },
+      cantidad: 2,
+    },
+    {
+      product: {
+        title: "Producto 2",
+        price: 20.0,
+      },
+      cantidad: 1,
+    },
+  ]);
+
   return (
     <ShopLayout
       title="Resumen de orden"
@@ -31,7 +49,9 @@ const SummaryPage = () => {
         <Grid item xs={12} sm={5}>
           <Card className="summary-card">
             <CardContent>
-              <Typography variant="h2">Resumen (3 productos)</Typography>
+              <Typography variant="h2">
+                Resumen ({cart.length} productos)
+              </Typography>
               <Divider sx={{ my: 1 }} />
 
               <Box display="flex" justifyContent="space-between">
