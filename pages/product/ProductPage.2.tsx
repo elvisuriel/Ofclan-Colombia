@@ -7,7 +7,7 @@ import { ItemCounter } from "../../components/ui/ItemCounter";
 import { useRouter } from "next/router";
 import { ISize } from "../../interfaces";
 
-const ProductPage: FC = () => {
+export const ProductPage: FC = () => {
   const router = useRouter();
   const { slug } = router.query; // Obtener el slug del producto de la consulta
 
@@ -81,7 +81,7 @@ Detalles del producto:
               />
               <SizeSelector
                 sizes={product.sizes}
-                //selectedSize={selectedSize}
+                selectedSize={selectedSize}
                 onSelectSize={setSelectedSize}
               />
             </Box>
@@ -105,5 +105,3 @@ Detalles del producto:
     </ShopLayout>
   );
 };
-
-export default ProductPage;
