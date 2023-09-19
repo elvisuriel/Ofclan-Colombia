@@ -80,7 +80,6 @@ Detalles del producto:
               />
             </Box>
 
-            {/* Agregar al carrito */}
             <Button
               color="primary"
               className="circular-btn"
