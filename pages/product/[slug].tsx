@@ -5,6 +5,7 @@ import { ProductSlideshow, SizeSelector } from "../../components/products";
 import { initialData } from "../../database/products";
 import { ItemCounter } from "../../components/ui/ItemCounter";
 import { useRouter } from "next/router";
+import { ISize } from "../../interfaces";
 
 const ProductPage: FC = () => {
   const router = useRouter();
@@ -22,7 +23,7 @@ const ProductPage: FC = () => {
   const [cantidad, setCantidad] = useState(1);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [selectedSize, setSelectedSize] = useState<string | undefined>(
+  const [selectedSize, setSelectedSize] = useState<ISize | undefined>(
     undefined
   );
   const whatsappNumber = "573103351279";
