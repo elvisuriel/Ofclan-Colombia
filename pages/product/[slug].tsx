@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import React, { FC, useState } from "react";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import { ShopLayout } from "../../components/layouts";
 import { ProductSlideshow, SizeSelector } from "../../components/products";
@@ -19,13 +19,14 @@ const ProductPage: FC = () => {
     return <div>Producto no encontrado</div>;
   }
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [cantidad, setCantidad] = useState(1);
+  // Estado para rastrear la cantidad seleccionada
+  const [selectedQuantity, setSelectedQuantity] = useState(1);
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+  // Estado para rastrear la talla seleccionada
   const [selectedSize, setSelectedSize] = useState<ISize | undefined>(
     undefined
   );
+
   const whatsappNumber = "573103351279";
   const openWhatsApp = () => {
     // Construye el mensaje de WhatsApp con la información seleccionada
@@ -35,7 +36,7 @@ const ProductPage: FC = () => {
 Detalles del producto:
 - Nombre: ${product.title}
 - Precio por unidad: $${product.price.toLocaleString()}
-- Cantidad: ${cantidad}
+- Cantidad: ${selectedQuantity}
 - Talla: ${selectedSize || "sin seleccionar"}
 `;
 
@@ -72,7 +73,10 @@ Detalles del producto:
 
             <Box sx={{ my: 2 }}>
               <Typography variant="subtitle2">Cantidad</Typography>
-              <ItemCounter cantidad={cantidad} setCantidad={setCantidad} />
+              <ItemCounter
+                cantidad={selectedQuantity}
+                setCantidad={setSelectedQuantity}
+              />
               <SizeSelector
                 sizes={product.sizes}
                 selectedSize={selectedSize}
