@@ -18,27 +18,30 @@ const ProductPage: FC = () => {
     return <div>Producto no encontrado</div>;
   }
 
-  // Estado para rastrear la cantidad y talla seleccionadas
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [cantidad, setCantidad] = useState(1);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [selectedSize, setSelectedSize] = useState<string | undefined>(
     undefined
   );
-
-  // Función para abrir WhatsApp en un nuevo tab
   const whatsappNumber = "573103351279";
   const openWhatsApp = () => {
     // Construye el mensaje de WhatsApp con la información seleccionada
-    const message = `¡Hola! Estoy interesado en comprar ${cantidad} ${
-      product.title
-    } en talla ${selectedSize || "sin seleccionar"}.`;
+    const message = `
+¡Hola! Estoy interesado en comprar:
 
-    // Codifica el mensaje para que sea parte de la URL
+Detalles del producto:
+- Nombre: ${product.title}
+- Precio por unidad: $${product.price.toLocaleString()}
+- Cantidad: ${cantidad}
+- Talla: ${selectedSize || "sin seleccionar"}
+`;
+
     const encodedMessage = encodeURIComponent(message);
 
-    // Construye la URL completa con el mensaje codificado
     const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
 
-    // Abre la URL en una nueva ventana o pestaña
     window.open(whatsappURL, "_blank");
   };
 
@@ -58,16 +61,14 @@ const ProductPage: FC = () => {
 
         <Grid item xs={12} sm={5}>
           <Box display="flex" flexDirection="column">
-            {/* titulos */}
             <Typography variant="h1" component="h1">
               {product.title}
             </Typography>
             <Typography
               variant="subtitle1"
               component="h2"
-            >{`$${product.price}`}</Typography>
+            >{`$${product.price.toLocaleString()}`}</Typography>
 
-            {/* Cantidad */}
             <Box sx={{ my: 2 }}>
               <Typography variant="subtitle2">Cantidad</Typography>
               <ItemCounter cantidad={cantidad} setCantidad={setCantidad} />

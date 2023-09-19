@@ -58,7 +58,7 @@ export const ProductCard: React.FC<Props> = ({ product }) => {
             {product.title}
           </Typography>
           <Typography variant="subtitle2" fontWeight={300}>
-            {`$${product.price}`}
+            {`$${product.price.toLocaleString()}`}
           </Typography>
         </Box>
       </Card>

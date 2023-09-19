@@ -50,7 +50,9 @@ export const CartList: FC<Props> = ({ editable = false }) => {
               </Typography>
 
               {editable ? (
-                <ItemCounter />
+                <ItemCounter cantidad={0} setCantidad={function (cantidad: number): void {
+                  throw new Error("Function not implemented.");
+                } } />
               ) : (
                 <Typography variant="h5">3 items</Typography>
               )}
