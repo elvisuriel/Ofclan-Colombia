@@ -72,12 +72,12 @@ export const ProductPage: FC = () => {
             <Box sx={{ my: 2 }}>
               <Typography variant="subtitle2">Cantidad</Typography>
               <ItemCounter cantidad={cantidad} setCantidad={setCantidad} />
-              {/* <SizeSelector
+              <SizeSelector
                 sizes={product.sizes}
                 onSelectSize={selectedSize}
                 // eslint-disable-next-line react/jsx-no-duplicate-props
                 onSelectSize={setSelectedSize}
-              /> */}
+              />
             </Box>
 
             {/* Agregar al carrito */}
