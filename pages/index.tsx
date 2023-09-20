@@ -13,7 +13,7 @@ const Home: NextPage = () => {
     >
       <Box sx={{ mb: 2, mt: -7 }} textAlign="center">
         <Image
-          src="/images/LOGO OF CLAN.png"
+          src="/images/OFCLAN.png"
           alt="Logo de OF-CLAN" // Agrega un texto descriptivo aquí
           width={300}
           height={100}
