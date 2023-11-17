@@ -168,7 +168,7 @@ export const initialData: SeedData = {
     {
       description:
         "Pantaloneta Deportiva de Fabricación Local de Of Clan: Apoya la industria colombiana al elegir nuestra pantaloneta deportiva de fabricación local. Cada prenda es un testimonio de la artesanía y la calidad que caracterizan a los productos colombianos. Disfruta de la comodidad y el estilo que solo Of Clan puede ofrecer en cada pantaloneta.",
-      images: ["PhotoRoom-17.png", "PhotoRoom-18.png"],
+      images: ["PhotoRoom-19.png", "PhotoRoom-20.png"],
       inStock: 17,
       price: 50000,
       sizes: ["XS", "S", "XL", "XXL"],
