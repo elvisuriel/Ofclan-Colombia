@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <Image
           src="/images/OFCLAN.png"
           alt="Logo de OF-CLAN" // Agrega un texto descriptivo aquí
-          width={300}
+          width={500}
           height={100}
         />
       </Box>

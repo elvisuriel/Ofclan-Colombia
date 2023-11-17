@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <footer
       style={{
-        backgroundColor: "#007bff",
+        backgroundColor: "#282828",
         color: "#fff",
         padding: "1rem",
         marginTop: "auto",
@@ -61,8 +61,6 @@ const Footer = () => {
               Lunes a Viernes 8am - 6pm
               <br />
               Sábados 8am - 1pm
-              <br />
-              Domingos 10am - 6pm
             </Typography>
           </Grid>
 
@@ -110,7 +108,7 @@ const Footer = () => {
             marginX: "0.5rem",
           }}
           component="a"
-          href="https://www.twitter.com/tu-cuenta-de-twitter"
+          href="https://www.twitter.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
