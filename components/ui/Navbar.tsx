@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import Image from "next/image";
 import {
   AppBar,
   Badge,
@@ -21,6 +22,7 @@ import {
   faTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { write } from "fs";
 
 export const Navbar = () => {
   // Número de WhatsApp del cliente
@@ -34,7 +36,7 @@ export const Navbar = () => {
   return (
     <AppBar
       position="static"
-      sx={{ backgroundColor: "#007bff" }}
+      sx={{ backgroundColor: "#282828" }}
       className="navbar"
     >
       <Toolbar
@@ -58,8 +60,24 @@ export const Navbar = () => {
               marginRight: "2rem", // Añade margen a la derecha
             }}
           >
-            <Typography variant="h4">OF-CLAN</Typography>
-            <Typography variant="h6" sx={{ marginLeft: "2rem" }}>
+            <Box
+              sx={{
+                mb: 2,
+                mt: 0.5,
+                p: 0.5,
+                borderRadius: 10,
+                backgroundColor: "#fff",
+              }}
+              textAlign="center"
+            >
+              <Image
+                src="/images/LOGO OF CLAN.png"
+                alt="Logo de OF-CLAN" // Agrega un texto descriptivo aquí
+                width={200}
+                height={38}
+              />
+            </Box>
+            <Typography variant="h6" sx={{ marginLeft: "1rem" }}>
               Shop
             </Typography>
           </Link>

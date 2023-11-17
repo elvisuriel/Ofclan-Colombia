@@ -41,8 +41,8 @@
 
 @media (max-width: 768px) {
   .navbar {
-    background-color: #007bff;
-    padding-bottom: 100px; 
+    background-color:#282828;
+    padding-bottom: 120px; 
     margin-bottom: 100px;
      
   }
