@@ -64,14 +64,11 @@ export const Navbar = () => {
               sx={{
                 mb: 2,
                 mt: 0.5,
-                p: 0.5,
-                borderRadius: 10,
-                backgroundColor: "#fff",
               }}
               textAlign="center"
             >
               <Image
-                src="/images/LOGO OF CLAN.png"
+                src="/images/logoo.jpeg"
                 alt="Logo de OF-CLAN" // Agrega un texto descriptivo aquí
                 width={200}
                 height={38}
